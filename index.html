@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>JS vaskeeen</title>
+  <link rel="stylesheet" href="styles/style.css">
+ </head>
+ <body>
+ <div id="app" class="container">
+     <div id="site" class="content">
+        <header class="header">
+        <div class="header-logo">
+                <div class="header-logo-picture"><a href="#"><img src="./assets/header/logo-picture.png" alt=""></a></div>
+                <div class="header-logo-title"><a href="#">baby shop</a></div>
+        </div>
+            <div class="header-search">
+                <input type="text" class="header-search-input" id="">
+                <div class="header-search-btn">
+                    <button><a href="#"><img src="./assets/icons/search.png" class="header-search-icon" alt=""></a></button>
+                </div>
+            </div>
+            <div class="header-time">
+               <div class="header-time-icon">
+                   <img src="./assets/icons/clock.png" class="header-time-icon-png" alt="">
+               </div>
+                <div class="header-time-text">
+                    <p>Графік роботи:</p>
+                    <p>Контакт центру 09:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="header-call">
+                <div class="header-call-icon">
+                    <img src="./assets/icons/phone-call.png" class="header-call-icon-png" alt="">
+                </div>
+                <div class="header-call-text">
+                    <p><a href="#">0955308885</a></p>
+                    <p><a href="#">0671589545</a></p>
+                    <p><a href="#">Передзвонити Вам?</a></p>
+                </div>
+            </div>
+        </header>
+
+         <!--        плашка навігації по категоріям-->
+         <div class="nav">
+             <div class="nav-menu">
+                 <ul class="nav-list">
+                     <li><a href="#" class="active">Новинки</a></li>
+                     <li><a href="#">Хлопчику</a></li>
+                     <li><a href="#">Дівчинці</a></li>
+                     <li><a href="#">Унісекс</a></li>
+                     <li><a href="#">Літні</a></li>
+                     <li><a href="#">Демісезон</a></li>
+                     <li><a href="#">Зимові</a></li>
+                     <li><a href="#">Аксесуари</a></li>
+                     <li><a href="#">Хлопчику</a></li>
+                     <li><a href="#">Дівчинці</a></li>
+                     <li><a href="#">Унісекс</a></li>
+                     <li><a href="#">Літні</a></li>
+                     <li><a href="#">Демісезон</a></li>
+                     <li><a href="#">Зимові</a></li>
+                     <li><a href="#">Аксесуари</a></li>
+                 </ul>
+             </div>
+             <div class="nav-user">
+                <div class="nav-user-account">
+                    <img src="./assets/icons/user.png" class="nav-user-account-icon" alt="">
+                    <p><a href="#">Вхід</a></p>
+                </div>
+                 <div class="nav-user-cart">
+                     <img src="./assets/icons/shopping-cart.png" class="nav-user-cart-icon" alt="">
+                     <p><a href="#">Кошик</a></p>
+                 </div>
+             </div>
+         </div>
+
+
+         <div class="container">
+             <div class="block-main">
+                    <!--Товари-->
+                    <div class="col">
+                        <!--        плашка навігації по категоріям-->
+                        <div class="block-category">
+                            <div class="category">
+                                <div class="category-title">
+                                    category
+                                </div>
+                            </div>
+                        </div>
+                        <!--        плашка навігації по категоріям-->
+
+                        <!--блок з товаром карточки-->
+                        <div class="block-products" id="products-container">
+                            <!--             js -->
+                        </div>
+                        <!--блок з товаром карточки-->
+                    </div>
+             </div>
+         </div>
+
+<!--блок з корзиною-->
+         <div class="cart none">
+             <button class="cart-btn-close"></button>
+             <!--товари-->
+             <div class="card">
+                 <div class="card-body">
+                     <h5 class="card-title">Ваше замовлення</h4>
+                         <div data-cart-empty class="alert alert-secondary" role="alert">
+                             Кошик порожній
+                         </div>
+                         <!-- cart-wrapper -->
+                         <div class="cart-wrapper">
+                             <!--js script-->
+<!--                             ...-->
+                             <!--js script-->
+                         </div>
+                         <!-- cart-wrapper -->
+
+                         <!-- Стоимость заказа -->
+                         <div class="cart-total">
+                             <p data-cart-delivery class="none">
+                                 <span class="h5">Доставка:</span> <span class="delivery-cost">0 грн.</span>
+                                 <br> <span class="small">Безкоштовно при замовленні від 600грн</span>
+                             </p>
+                             <p><span class="h5">Всього:</span> <span class="total-price">0</span> <span class="rouble">грн.</span></p>
+                         </div>
+                         <!-- // Стоимость заказа -->
+                 </div>
+                 <!-- Оформить заказ -->
+                 <div id="order-form" class="card-body border-top none">
+                     <h5 class="card-title">Оформить заказ</h4>
+                         <form>
+                             <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Ваш номер телефона">
+                             </div>
+                             <button id="btnReceipt" type="submit" class="btn btn-primary">Заказать</button>
+                         </form>
+                 </div>
+                 <!-- Оформить заказ -->
+             </div>
+         </div>
+         <!--блок з корзиною-->
+
+
+     </div>
+ </div>
+ <script type="module" src="./renderProducts.js"></script>
+ <script type="module" src="./toggleCartStatus.js"></script>
+ <script type="module" src="./calcCartPrice.js"></script>
+ <script type="module" src="./script.js"></script>
+ <script type="module" src="./cart.js"></script>
+ </body>
+</html>
